@@ -7,5 +7,6 @@ app.controller('descriptionCtrl', function($stateParams ) {
 	};
 
 	init();
+  
 
 });
