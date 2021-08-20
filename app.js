@@ -2,11 +2,11 @@
 var app = angular.module("MyApp", ['ui.router','ngMaterial']);
 
 // for routing
-app.config(function($stateProvider,$urlRouterProvider) {
-    $urlRouterProvider.otherwise('/headlines');
+app.config(function($stateProvider,$urlRouterProvider,$locationProvider) {
+    // $urlRouterProvider.otherwise('/headlines');
     $stateProvider
     .state("content", {
-        url: '/headlines',
+        url: '/',
         templateUrl : "content/content.html",
         controller : "NewsViewCtrl",
         controllerAs: 'vm',
@@ -21,5 +21,6 @@ app.config(function($stateProvider,$urlRouterProvider) {
             headlines: null
         }
     });
+    $locationProvider.html5Mode(true);
 });
 
