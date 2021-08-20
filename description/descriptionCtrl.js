@@ -6,7 +6,5 @@ app.controller('descriptionCtrl', function($stateParams ) {
     vm.articles = $stateParams.headlines;
 	};
 
-	init();
-  
-
+	init(); 
 });
